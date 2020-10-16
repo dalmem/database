@@ -33,7 +33,7 @@ select first_name||' '||last_name as name ,salary from employees ORDER BY salary
 select first_name||' '||last_name as name ,salary ,department_id from employees where department_id = '60'  order by salary asc ;
 
 --12. 직무아이디가 IT_PROG 이거나, SA_MAN인 사원의 이름과 직무아이디를 출력하세요.
-select first_name||' '||last_name as name ,salary from employees where job_id = 'IT_PROG' or job_id ='SA_MAN';
+select first_name||' '||last_name as name ,salary ,job_id from employees where job_id = 'IT_PROG' or job_id ='SA_MAN';
 
 --13. Steven King 사원의 정보를 “Steven King 사원의 급여는 24000달러 입니다” 형식으로 출력하세요.
 select '"'||first_name||' '||last_name||'사원의 급여는 '||salary||'달러 입니다"' as detail from employees where first_name||' '||last_name = 'Steven King';
