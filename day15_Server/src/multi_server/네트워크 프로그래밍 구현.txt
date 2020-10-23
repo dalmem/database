@@ -1,0 +1,23 @@
+문항.1
+통합 개발 환경
+
+문항.2
+1.클래스 로더
+2. 메소드
+3. 스택
+4. 힙
+5. 가비지 콜렉터
+
+문항.3
+소켓
+
+
+문항.4
+
+
+문항.5
+
+소켓을 닫은후 list.remove(); 를 이용하여 리스트에 저장 되어 있는 PrintWriter객체를 제거해준다.
+socket.close();
+list.remove(new PrintWriter(socket.getOutputStream()));
+
