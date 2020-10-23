@@ -29,7 +29,7 @@ public class JDBCREQUEST {
 
 
 			Scanner scan = new Scanner(System.in);
-			System.out.println("[1. 회원, 2. 도서, 3. 대여리스트]");
+			System.out.println("[1. 회원, 2. 도서, 3. 대여리스트	]");
 			int menu = scan.nextInt();
 
 			switch (menu) {

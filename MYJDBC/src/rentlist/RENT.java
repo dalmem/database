@@ -16,15 +16,13 @@ public class RENT {
 		case 1:
 			System.out.print("no > ");
 			int lno = scan.nextInt();
-			System.out.print("반납일> ");
-			int date = scan.nextInt();
 			System.out.print("책번호 > ");
 			int bno = scan.nextInt();
 			System.out.print("대여자 > ");
 			int mno = scan.nextInt();
 			System.out.print("대여상태 > ");
 			String returnYN = scan.next();
-			vo= new rentVO(lno,date,bno,mno,returnYN);
+			vo= new rentVO(lno,0,bno,mno,returnYN);
 			int result = dao.add(vo);
 			if (result == 1) {
 				System.out.println("추가완료");

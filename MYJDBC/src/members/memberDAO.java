@@ -75,7 +75,7 @@ public class memberDAO implements InterMember{
 				System.out.print(rs.getString("bname"));
 				System.out.print(rs.getString("returnYN"));
 				
-			}
+			}System.out.println();
 			
 		} catch (Exception e) {
 			e.printStackTrace();

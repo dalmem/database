@@ -10,17 +10,23 @@ public class rentDAO implements InterRent{
 	private final String url = "jdbc:oracle:thin:@localhost:1521/XEPDB1";
 	private final String uid = "user01";
 	private final String upw = "user01";
+	public rentDAO() {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (Exception e) {
+			System.out.println("클래스 로더 에러");
+		}
+	}
 	@Override
 	public int add(rentVO vo) {
 		int result = 0;//결과 반환변수
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql = "insert into lists values(?,?,?,?,?)";
+		String sql = "insert into lists values(?,sysdate,?,?,?)";
 		try {
 			conn = DriverManager.getConnection(url,uid,upw);
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, vo.getLno());
-			pstmt.setInt(2, vo.getDate());
+			pstmt.setInt(1, vo.getLno());			
 			pstmt.setInt(3, vo.getBno());
 			pstmt.setInt(4, vo.getMno());
 			pstmt.setString(5, vo.getReturnYN());
