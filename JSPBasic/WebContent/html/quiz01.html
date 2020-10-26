@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table.center {
+  	margin-left: auto; 
+  	margin-right: auto;
+  	margin-top: 200px;
+  	margin-bottom: auto;
+	}
+</style>
+</head>
+<body>
+
+	
+	<table class="center">
+		<tr><!-- 테이블 행  -->
+			<th colspan="10" align ="left">
+				<h1>Emp 정보</h1>
+			</th><!-- 테이블 행의 이름 -->
+		</tr>
+		<tr>
+			<th align="left">사원번호 :</th>
+			<td><input type="text" name="id"  required></td><!-- 사원번호 th의 값 -->
+		</tr>
+		<tr>
+			<th align="left">이름:</th>
+			<td><input type="text" name="name"></td>
+		</tr>
+			<tr>
+			<th align="left">성별:</th>
+				<td><input type="radio" name="gender">남자
+					<input type="radio" name="gender">여자
+				</td>
+		</tr>
+		<tr>
+			<th align="left">직업:</th>
+			<td><input type="text" name="job"></td>
+		</tr>
+		<tr>
+			<th align="left">상사:</th>
+			<td>
+				<select name ="mgr">
+					<option>7369</option>
+					<option>7499</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th align="left">입사일:</th>
+			<td><input type="text" name="hiredate" placeholder="2012-01-01"></td>
+		</tr>
+		<tr>
+			<th align="left">급여:</th>
+			<td><input type="text" name="salary"></td>
+		</tr>
+		<tr>
+			<td align="left">커미션:</td>
+			<td><input type="text" name="commition"></td>
+		</tr>
+		<tr>
+			<th align="left">부서번호:</th>
+			<td>
+				<select name="deptno">
+					<option>10 ACCOUNTING NEWYORK</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th>
+			</th>
+				<td colspan="2" align="center">
+					<input type="submit" value="저장" >
+					<input type="reset" value="취소">
+				</td>			
+		</tr>	
+	</table>
+</body>
+</html>
